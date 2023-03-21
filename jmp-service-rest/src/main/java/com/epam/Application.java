@@ -1,5 +1,6 @@
 package com.epam;
 
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,7 +10,7 @@ import javax.annotation.PostConstruct;
 
 //@SpringBootApplication(scanBasePackages = {"com.epam"})
 @SpringBootApplication()
-//@ComponentScan(basePackages = {"com.epam"})
+@OpenAPIDefinition
 public class Application {
 
     @Autowired
@@ -21,7 +22,6 @@ public class Application {
 
     @PostConstruct
     void after(){
-        System.out.println("call");
         myService.hi();
     }
 
