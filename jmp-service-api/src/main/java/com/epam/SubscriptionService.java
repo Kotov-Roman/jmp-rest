@@ -8,9 +8,9 @@ public interface SubscriptionService {
 
     Subscription get(Long id);
 
-    Subscription create(SubscriptionRequestDto subscriptionRequestDto);
+    Subscription create(Subscription subscription);
 
-    Subscription update(SubscriptionRequestDto subscriptionRequestDto);
+    Subscription update(Subscription subscription);
 
     void delete(Long id);
 }
